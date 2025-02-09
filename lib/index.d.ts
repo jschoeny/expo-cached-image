@@ -16,6 +16,9 @@ export declare const CacheManager: {
         file: string;
         key: string;
     }) => Promise<string>;
+    keyExists: ({ key }: {
+        key: string;
+    }) => Promise<boolean>;
     getCachedUri: ({ key }: {
         key: string;
     }) => Promise<string>;

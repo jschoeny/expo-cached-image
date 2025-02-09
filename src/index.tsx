@@ -105,6 +105,13 @@ export const CacheManager = {
     return await CacheManager.getCachedUri({ key });
   },
 
+  keyExists: async ({ key }: { key: string }) => {
+    const metadata = await FileSystem.getInfoAsync(
+      `${CONST.IMAGE_CACHE_FOLDER}${key}.png`
+    );
+    return metadata.exists;
+  },
+
   getCachedUri: async ({ key }: { key: string }) => {
     return await FileSystem.getContentUriAsync(
       `${CONST.IMAGE_CACHE_FOLDER}${key}.png`
