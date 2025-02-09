@@ -118,7 +118,7 @@ export const CacheManager = {
   }: {
     uri: string;
     key: string;
-    options: DownloadOptions;
+    options?: DownloadOptions;
   }) => {
     return await FileSystem.downloadAsync(
       uri,

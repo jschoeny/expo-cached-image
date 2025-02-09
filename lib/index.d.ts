@@ -22,7 +22,7 @@ export declare const CacheManager: {
     downloadAsync: ({ uri, key, options, }: {
         uri: string;
         key: string;
-        options: DownloadOptions;
+        options?: DownloadOptions;
     }) => Promise<FileSystem.FileSystemDownloadResult>;
 };
 export default CachedImage;
